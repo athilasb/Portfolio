@@ -1,0 +1,259 @@
+body,
+ul {
+    font-family: 'Radio Canada', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+#header a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+#menu a:hover {
+    background: #fff;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#menu a {
+    display: block;
+    padding: 0.5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+
+/*menu*/
+
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #000000;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: #fff;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+.apresentação {
+    height: 100%;
+    background: #19142a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0px 60px
+}
+
+.apresentação img {
+    height: 100%;
+    margin-top: 120px;
+}
+
+.titulo_3 a {
+    border-bottom: solid 2px #d6223b;
+    max-width: 150px;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.titulo_1 {
+    background: #511830;
+    max-width: 350px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.titulo_2 {
+    max-width: 500px;
+}
+
+.titulo_2 span {
+    color: #d6223b;
+}
+
+.partes1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b91e33;
+}
+
+.partes1 a {
+    color: #fff;
+}
+
+.partes1 span {
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(90deg);
+    width: 100%;
+    display: flex;
+    width: 30px;
+}
+
+.partes1 span i {
+    margin: 5px;
+}
+
+@media (max-width: 800px) {
+    .apresentação {
+        padding-top: 80px;
+        display: block;
+    }
+    .partes img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .partes1 span {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        width: 100%;
+        display: flex;
+        width: 30px;
+    }
+    .partes1 {
+        display: block;
+    }
+}
+
+.formacao_titulo {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.formacao_titulo>h2 {
+    margin: 0;
+    padding-top: 60px;
+}
+
+.formacao {
+    background: #f8f8f8;
+}
+
+.materias {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 18px;
+    background: rgb(221, 221, 221);
+    border-radius: 15px;
+    padding: 90px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.formacao_materias {
+    padding: 0px 90px;
+}
+
+.concluido {
+    margin: 5px;
+    color: rgb(2, 190, 58);
+}
+
+.cursando {
+    margin: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.swiper-wrapper {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
